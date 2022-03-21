@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--link to Bootstrap's content delivery network-->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body class="bg-dark">
+    <div class="wrapper" id="banner">
+        <nav class="navbar navbar-dark bg-dark navbar-expand-lg justify-content-center">
+            
+
+
+        <div class="container-fluid" id="text_container">
+            <div class="row">
+                <div class="col-md-2">
+                </div>
+                <div class="col-md-8" id="text_area">
+                    <h4>UFO Sightings: Are They Fact or Fiction?</h4><br/>
+                    <p>
+                        Are we alone in the universe? Are aliens trying to contact us, or do they want to be left alone? 
+                        For millennia, humans have turned to the sky to answer this question. Thankfully we can supplement our sky-searching with data analysis. Dig through the data yourself, and let us know what you see.
+                    </p>
+                </div>
+                <div class="col-md-2">  
+                </div>
+            </div>
+          
+        </div>
+        <div class="container-fluid" id="instruction_container">
+            <div class="row">
+                <div class="col-md-2" id="instruction_left">
+
+                </div>
+                <div class="col-md-8" id="instruction_area">
+                    <h5>Instructions</h5>
+                    <p>To explore and review the UFO sightings data, please input your desired parameters within the form area. The table will automatically filter after pressing "enter" after your input or clicking outside of the input box after.
+                    </p>
+                </div>
+                <div class="col-md-2" id="instruction_text"> 
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid" id="form_outter">
+            <div class="row">
+                <div class="col-md-1">
+                </div>
+                <div class="col-md-3 list-group" id="form_inner" >
+                    <form style="background-color:rgb(29, 29, 39);">
+                        <ul class="list-group-item" style="background-color:rgb(29, 29, 39);" >
+                            <h5 id="form_header" style="text-align:center;color: white;">Filter Search</h5>
+                            <li class="list-group-item bg-dark">
+                                <label for="date">Enter a Date</label>
+                                <input type="text" placeholder="1/10/2010" id="datetime" />
+                            </li>
+                            <li class="list-group-item bg-dark">
+                                <label for="city">Enter a City</label>
+                                <input type="text" placeholder="san diego" id="city" />
+                            </li>
+                            <li class="list-group-item bg-dark">
+                                <label for="state">Enter a State</label>
+                                <input type="text" placeholder="ca" id="state" />
+                            </li>
+                            <li class="list-group-item bg-dark">
+                                <label for="country">Enter a Country</label>
+                                <input type="text" placeholder="us" id="country" />
+                            </li>
+                            <li class="list-group-item bg-dark">
+                                <label for="shape">Enter a Shape</label>
+                                <input type="text" placeholder="triangle" id="shape" />
+                            </li>                        
+                        </ul>
+                    </form>
+                </div>
+                <div class="col-md-7 pre-scrollable" id="table_div">
+                    <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Date</th>
+                            <th>City</th>
+                            <th>State</th>
+                            <th>Country</th>
+                            <th>Shape</th>
+                            <th>Duration</th>
+                            <th>Comments</th>
+                          </tr>
+                        </thead>
+                        <tbody></tbody>
+                      </table>
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+    <script src="static/js/data.js"></script>
+    <script src="static/js/app.js"></script>
+</body>
+</html>
